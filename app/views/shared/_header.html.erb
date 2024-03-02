@@ -37,7 +37,7 @@
             </svg>
           </div>
           <div>
-              <%= link_to "Category", categories_path, class: "font-semibold text-gray-900" %>
+              <%= link_to "Category", categories_path, data: { turbo_frame: 'modal' }, class: "font-semibold text-gray-900" %>
             <p class="mt-1 text-gray-600">Create new category</p>
           </div>
         </div>

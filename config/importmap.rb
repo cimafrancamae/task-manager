@@ -11,3 +11,5 @@ pin "stimulus-notification" # @2.2.0
 pin "hotkeys-js" # @3.13.7
 pin "stimulus-use" # @0.51.3
 pin "@hotwired/stimulus", to: "stimulus.min.js"
+pin "trix"
+pin "@rails/actiontext", to: "actiontext.esm.js"

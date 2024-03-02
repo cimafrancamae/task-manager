@@ -1,15 +1,22 @@
-
 <div class="flex flex-col h-full">
   <!-- User info -->
-  <div class="p-4">
-    <div class="bg-blue-500 text-white rounded p-2">
-      <%= current_user.email %>
-    </div>
+  <div class="p-4 bg-blue-500 text-white rounded">
+    <%= current_user.email %>
   </div>
 
   <!-- Navigation links -->
   <nav class="flex-1">
-    <%= link_to "Categories", categories_path, class: "block p-4 hover:bg-gray-200" %>
+    <ul>
+      <li class="block p-4 hover:bg-gray-200">Categories</li>
+      <% if @categories %>
+        <% @categories.each do |category| %>
+          <div class="bg-white p-4 mb-4 rounded shadow">
+            <li class="text-lg font-semibold mb-2"><%= category.name %></li>
+            <!-- Additional category details or actions -->
+          </div>
+        <% end %>
+      <% end %>
+    </ul>
     <%= link_to "Tasks", tasks_path, class: "block p-4 hover:bg-gray-200" %>
     <%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete }, class: "block p-4 hover:bg-gray-200" %>
     <!-- Add more navigation links as needed -->

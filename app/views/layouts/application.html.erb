@@ -13,12 +13,9 @@
   <body class="h-full">
 
     <%= render "shared/toast" %>
-
-    <header>
-
-    </header>
       
     <main class="container mx-auto justify-center">
+      <%= turbo_frame_tag "modal" %>
       <%= yield %>
     </main>
 
